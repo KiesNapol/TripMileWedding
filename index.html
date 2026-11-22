@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap');
 :root{--ink:#19352f;--muted:#687b73;--cream:#f6f4ed;--paper:#fffefa;--green:#1c5145;--gold:#d5a95d;--line:#e7e5dc}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Prompt',sans-serif;line-height:1.65}
-a{color:inherit}.hero{min-height:82vh;display:flex;align-items:end;padding:clamp(28px,7vw,90px);color:#fff;background:linear-gradient(0deg,rgba(8,28,24,.82),rgba(8,28,24,.08)),url('assets/khao-plai-dam.jpg') center/cover}
+a{color:inherit}.hero{min-height:82vh;display:flex;align-items:end;padding:clamp(28px,7vw,90px);color:#fff;background:linear-gradient(0deg,rgba(8,28,24,.82),rgba(8,28,24,.08)),url('https://patricklepetit.jalbum.net/NAKHON%20SI%20THAMMARAT/PHOTOS/SICHON/Khao%20Phlai%20Dam%20View%20Point/thumbs/U0827149.jpg') center/cover}
 .hero-inner{max-width:900px}.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:#f0d8a7}.hero h1{font-size:clamp(2.6rem,8vw,6.2rem);line-height:1.08;margin:12px 0;font-weight:600}.hero p{font-size:clamp(1rem,2vw,1.25rem);max-width:650px;color:#f4f1e9}
 .pill{display:inline-block;border:1px solid #ffffff80;border-radius:999px;padding:7px 14px;margin:6px 6px 0 0;font-size:.85rem}
 nav{position:sticky;top:0;z-index:10;background:#fffefaed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;gap:8px;overflow:auto;padding:10px max(16px,calc((100vw - 1100px)/2));white-space:nowrap}
@@ -23,29 +23,60 @@ h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;margin:0 0 18px}h3{margin:
 .notice{border-left:4px solid var(--gold);padding:12px 16px;background:#fbf5e9;border-radius:0 12px 12px 0;margin:16px 0}
 .closing{margin-top:70px;background:#173d36;color:white;border-radius:28px;overflow:hidden}.closing img{width:100%;max-height:520px;object-fit:cover;display:block}.closing-text{text-align:center;padding:34px 24px 42px}.closing h2{font-size:clamp(1.7rem,4vw,2.7rem);margin-bottom:8px}.closing p{color:#e6e9df;margin:6px}.signature{color:#e9c987!important;font-size:1.2rem;font-weight:500;margin-top:15px!important}
 footer{text-align:center;color:var(--muted);font-size:.8rem;padding:28px 12px}
-@media(max-width:700px){.hero{min-height:70vh}.intro{grid-template-columns:1fr}.day-top{grid-template-columns:1fr}.day-top img{height:190px;min-height:190px;order:-1}.timeline{padding:6px 18px 20px}.day-title{padding:20px 18px 12px}.event{grid-template-columns:66px 1fr;gap:9px}.cards{grid-template-columns:1fr 1fr}.place img{height:120px}.vehicles{grid-template-columns:1fr}.panel{padding:19px}.stats{gap:7px}.stat{padding:10px}.stat b{font-size:1.25rem}}
-@media(max-width:420px){.cards{grid-template-columns:1fr}.place img{height:170px}.pill{font-size:.78rem}}
+
+.flight-panel,.weather-panel,.wedding-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:25px;margin:24px 0;box-shadow:0 10px 35px #1b34290a}
+.flight-heading{display:flex;justify-content:space-between;gap:15px;align-items:start}.flight-heading small,.weather-panel small,.wedding-copy small{color:#a47b36;letter-spacing:.13em;font-weight:600}.flight-heading h2,.weather-panel h2,.wedding-copy h2{margin:5px 0 8px}.flight-heading p,.weather-panel p{margin:0;color:var(--muted)}.flight-tag{background:#f4e8e5;color:#8b3c2d;padding:6px 12px;border-radius:99px;font-size:.8rem}
+.flight-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}.flight-card{border:1px solid var(--line);border-radius:17px;padding:17px;background:#fbfaf6}.flight-top{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:.85rem}.flight-top b{font-size:1.1rem;color:var(--green)}.flight-route{font-size:1.9rem;font-weight:600;letter-spacing:.05em;margin:9px 0}.flight-route span{color:var(--gold);padding:0 9px}.flight-card p{font-size:.86rem;color:var(--muted);min-height:44px}.flight-card a{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:8px 13px;border-radius:99px;font-size:.82rem;margin-top:8px}.flight-alert{background:#fff5e7;border-left:4px solid var(--gold);padding:13px 15px;border-radius:0 12px 12px 0;margin-top:16px;font-size:.88rem}
+.weather-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.weather-grid>div{background:#edf1e9;padding:16px;border-radius:16px}.weather-grid b,.weather-grid strong,.weather-grid span{display:block}.weather-grid strong{font-size:1.5rem;color:var(--green);margin:4px 0}.weather-grid span{font-size:.8rem;color:var(--muted)}.weather-note{font-size:.86rem!important}
+.wedding-card{display:grid;grid-template-columns:1fr .72fr;gap:24px;align-items:center;background:#f8f3ed}.wedding-copy p{color:var(--muted)}.wedding-times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}.wedding-times div{background:#ebe9db;padding:12px;border-radius:13px;text-align:center}.wedding-times b,.wedding-times span{display:block}.wedding-times b{font-size:1.3rem;color:#6e5948}.wedding-times span{font-size:.78rem;color:var(--muted)}.invite-image img{display:block;width:100%;max-height:560px;object-fit:contain;background:#fff;border-radius:12px;box-shadow:0 8px 25px #30201518}.invite-image p{text-align:center;color:var(--muted);font-size:.8rem;margin:7px}
+
+@media(max-width:700px){.hero{min-height:70vh}.intro{grid-template-columns:1fr}.wedding-card{grid-template-columns:1fr}.flight-grid{grid-template-columns:1fr}.weather-grid{grid-template-columns:1fr 1fr}.day-top{grid-template-columns:1fr}.day-top img{height:190px;min-height:190px;order:-1}.timeline{padding:6px 18px 20px}.day-title{padding:20px 18px 12px}.event{grid-template-columns:66px 1fr;gap:9px}.cards{grid-template-columns:1fr 1fr}.place img{height:120px}.vehicles{grid-template-columns:1fr}.panel{padding:19px}.stats{gap:7px}.stat{padding:10px}.stat b{font-size:1.25rem}}
+@media(max-width:420px){.weather-grid{grid-template-columns:1fr}.wedding-times{gap:5px}.wedding-times div{padding:9px 5px}.cards{grid-template-columns:1fr}.place img{height:170px}.pill{font-size:.78rem}}
 </style>
 </head>
 <body>
 <header class="hero" id="top"><div class="hero-inner">
 <div class="eyebrow">Southern Thailand · Friends trip · 2027</div>
-<h1>นครศรีฯ<br>Trip & Wedding</h1>
+<h1>นครศรีธรรมราช<br>Trip & Wedding</h1>
 <p>ทริปพบปะเพื่อน ร่วมงานแต่ง ไหว้พระ กินอาหารทะเล และพักผ่อนริมทะเลใต้</p>
 <span class="pill">9–11 มกราคม 2570</span><span class="pill">3 วัน 2 คืน</span><span class="pill">นครศรีธรรมราช · สิชล</span>
 </div></header>
-<nav><a href="#overview">ภาพรวม</a><a href="#day1">9 ม.ค.</a><a href="#day2">10 ม.ค.</a><a href="#day3">11 ม.ค.</a><a href="#places">สถานที่</a><a href="#thanks">ขอบคุณ</a></nav>
+<nav><a href="#overview">ภาพรวม</a><a href="#flights">เที่ยวบิน</a><a href="#wedding">งานแต่ง</a><a href="#weather">อากาศ</a><a href="#day1">9 ม.ค.</a><a href="#day2">10 ม.ค.</a><a href="#day3">11 ม.ค.</a><a href="#places">สถานที่</a><a href="#thanks">ขอบคุณ</a></nav>
 <main>
 <section id="overview" class="intro">
 <div class="panel"><div class="section-head" style="margin:0 0 12px"><small>THE PLAN</small><h2>ทริปนี้มีอะไรบ้าง</h2></div>
 <p class="muted">เริ่มเดินทางจากกรุงเทพฯ แยกตามสนามบินและกลุ่มรถ ก่อนเข้าตัวเมืองนครศรีธรรมราช จากนั้นร่วมงานแต่งและเดินทางต่อไปเที่ยวสิชล ปิดท้ายด้วยวิวทะเลเขาพลายดำ</p>
 <div class="stats"><div class="stat"><b>03</b><span>วันเดินทาง</span></div><div class="stat"><b>02</b><span>คืนที่พัก</span></div><div class="stat"><b>04</b><span>รถโดยประมาณ</span></div></div></div>
 <div class="panel"><h3>ที่พักคืนแรก · B3 Hotel</h3><p class="muted">เช็คอินวันที่ 9 มกราคม 2570</p><p>ห้องที่แจ้งแล้ว 5 ห้อง: แจ็ค · ปัง · บอล · บิ๊ก · กี้</p><p class="room">บีม · เอิง · ฟลุ๊ค: รอแจ้งการจัดห้องอีกครั้ง</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/z8XoSLtRPBeGg1L96?g_st=ic">เปิดแผนที่ B3 Hotel ↗</a>
-<hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>ที่พักคืนที่สอง · Aiyara Camping</h3><p class="muted">เข้าพักหลังเที่ยว Luca Cafe วันที่ 10 มกราคม</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/QtGyv2Fykiooi1QC7?g_st=ic">เปิดแผนที่ Aiyara Camping ↗</a></div>
+<hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>ที่พักคืนที่สอง · Aiyara Camping</h3><p class="muted">เข้าพักหลังเที่ยว Luca Cafe วันที่ 10 มกราคม</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Aiyara+Camping+%26+Resort%2C+Thung+Sai%2C+Sichon%2C+Nakhon+Si+Thammarat">เปิดแผนที่ Aiyara Camping ↗</a></div>
+</section>
+
+
+<section class="flight-panel" id="flights">
+ <div class="flight-heading"><div><small>FLIGHT TRACKING</small><h2>เที่ยวบินของกี้ · บอล · บิ๊ก</h2><p>กดปุ่มเพื่อตรวจสอบสถานะจากเว็บไซต์ติดตามเที่ยวบิน</p></div><span class="flight-tag">VietJet Air</span></div>
+ <div class="flight-grid">
+  <div class="flight-card"><div class="flight-top"><span>ขาไป · 9 ม.ค. 2570</span><b>VZ334</b></div><div class="flight-route">BKK <span>→</span> NST</div><p>ตารางที่เผยแพร่ปัจจุบัน: สุวรรณภูมิ → นครศรีธรรมราช · 13:10–14:30</p><a href="https://www.flightradar24.com/data/flights/vz334" target="_blank" rel="noopener">ติดตาม VZ334 ↗</a></div>
+  <div class="flight-card"><div class="flight-top"><span>ขากลับ · 11 ม.ค. 2570</span><b>VZ335</b></div><div class="flight-route">NST <span>→</span> BKK</div><p>ตารางที่เผยแพร่ปัจจุบัน: นครศรีธรรมราช → สุวรรณภูมิ · 15:00–16:20</p><a href="https://www.flightradar24.com/data/flights/vz335" target="_blank" rel="noopener">ติดตาม VZ335 ↗</a></div>
+ </div>
+ <div class="flight-alert"><b>หมายเหตุ:</b> ตารางที่เผยแพร่ปัจจุบันระบุ VZ334 สุวรรณภูมิ → นครศรีธรรมราช และ VZ335 นครศรีธรรมราช → สุวรรณภูมิ เวลาอาจเปลี่ยนแปลงได้ โปรดตรวจสอบ e-ticket และสถานะจริงใกล้วันเดินทาง</div>
+</section>
+<section class="weather-panel" id="weather">
+ <small>JANUARY CLIMATE NORMAL</small><h2>อากาศช่วง 9–11 มกราคม</h2><p>ค่าเฉลี่ยภูมิอากาศเดือนมกราคมของนครศรีธรรมราช ไม่ใช่พยากรณ์รายวันของปี 2570</p>
+ <div class="weather-grid">
+  <div><b>9 ม.ค.</b><strong>ประมาณ 25°C</strong><span>เฉลี่ยสูงสุด 27.9°C · ต่ำสุด 22.6°C</span></div>
+  <div><b>10 ม.ค.</b><strong>ประมาณ 25°C</strong><span>เฉลี่ยสูงสุด 27.9°C · ต่ำสุด 22.6°C</span></div>
+  <div><b>11 ม.ค.</b><strong>ประมาณ 25°C</strong><span>เฉลี่ยสูงสุด 27.9°C · ต่ำสุด 22.6°C</span></div>
+ </div><p class="weather-note">แนะนำเสื้อผ้าบางสบาย พกร่มหรือเสื้อกันฝนบาง ๆ และตรวจพยากรณ์จริงอีกครั้งก่อนเดินทาง 7–10 วัน</p>
+</section>
+<section class="wedding-card" id="wedding">
+ <div class="wedding-copy"><small>THE MAIN EVENT</small><h2>งานแต่ง ไมล์ & เจน</h2><p>10 มกราคม 2570 · โรงแรมตะมาลี<br>อำเภอพระพรหม จังหวัดนครศรีธรรมราช</p>
+  <div class="wedding-times"><div><b>08:09</b><span>แห่ขันหมาก</span></div><div><b>09:09</b><span>ฉลองมงคลสมรส</span></div><div><b>11:30</b><span>รับประทานอาหาร</span></div></div>
+  <a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/9QssERroikN6uDmK8?g_st=ic">เปิดแผนที่โรงแรมตะมาลี ↗</a>
+ </div><div class="invite-image"><img src="assets/wedding-invitation.png" alt="การ์ดเชิญงานแต่งไมล์และเจนฉบับเต็ม"><p>การ์ดเชิญงานแต่งฉบับเต็ม</p></div>
 </section>
 
 <div class="section-head" id="day1"><small>DAY 01 · SATURDAY</small><h2>9 มกราคม 2570 — เดินทาง & ไหว้พระ</h2><p class="muted">กรุงเทพฯ → นครศรีธรรมราช · เช็คอิน · เที่ยวในเมือง</p></div>
-<article class="day"><div class="day-top"><div class="day-title"><span class="date">09 JAN 2027</span><h3>ออกเดินทางสู่เมืองนคร</h3><p class="muted">ช่วงเช้าและช่วงบ่ายเดินทางแยกตามเที่ยวบิน/สนามบิน</p></div><img src="assets/phra-mahathat.jpg" alt="ภาพประกอบพระบรมธาตุ"></div>
+<article class="day"><div class="day-top"><div class="day-title"><span class="date">09 JAN 2027</span><h3>ออกเดินทางสู่เมืองนคร</h3><p class="muted">ช่วงเช้าและช่วงบ่ายเดินทางแยกตามเที่ยวบิน/สนามบิน</p></div><img src="https://cms.dmpcdn.com/travel/2025/02/07/5feace80-e521-11ef-b108-37ab1fcb8ce4_webp_original.webp" alt="ภาพประกอบพระบรมธาตุ"></div>
 <div class="timeline">
 <div class="event"><div class="time">ช่วงเช้า</div><div><b>แจ็ค + ปัง</b><p>เดินทางไปสนามบินดอนเมือง · รถ 1 คัน</p></div></div>
 <div class="event"><div class="time">ช่วงเช้า</div><div><b>เอิง + บีม + ฟลุ๊ค</b><p>เดินทางไปสนามบินสุวรรณภูมิ · รถ 1 คัน</p></div></div>
@@ -57,45 +88,45 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:28px 12px}
 </div></article>
 
 <div class="section-head" id="day2"><small>DAY 02 · SUNDAY</small><h2>10 มกราคม 2570 — งานแต่ง & เที่ยวสิชล</h2><p class="muted">ร่วมแสดงความยินดี ก่อนมุ่งหน้าสู่ทะเลสิชล</p></div>
-<article class="day"><div class="day-top"><div class="day-title"><span class="date">10 JAN 2027</span><h3>Wedding Day & Sichon</h3><p class="muted">วันนี้มีเวลาเดินทางต่อเนื่องหลายช่วง แนะนำรักษาเวลาให้ดี</p></div><img src="assets/temple.jpg" alt="ภาพบรรยากาศวัดไทย"></div>
+<article class="day"><div class="day-top"><div class="day-title"><span class="date">10 JAN 2027</span><h3>Wedding Day & Sichon</h3><p class="muted">วันนี้มีเวลาเดินทางต่อเนื่องหลายช่วง แนะนำรักษาเวลาให้ดี</p></div><img src="assets/wedding-invitation.png" alt="การ์ดเชิญงานแต่งไมล์และเจน"></div>
 <div class="timeline">
 <div class="event"><div class="time">07:00</div><div><b>ถึงโรงแรมตะมาลี</b><p>สถานที่จัดงานแต่ง · B3 Hotel ไปตะมาลี ใช้เวลาประมาณ 20 นาทีตามข้อมูลแพลน</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/9QssERroikN6uDmK8?g_st=ic">แผนที่โรงแรมตะมาลี ↗</a></div></div>
 <div class="event"><div class="time">11:00</div><div><b>ร่วมงานและรับประทานอาหาร</b><p>กำหนดให้มาถึงก่อนช่วง 11:00 น. และรับประทานอาหารที่ตะมาลี ไม่เกิน 12:00 น.</p></div></div>
 <div class="event"><div class="time">12:00</div><div><b>ออกจากตะมาลี กลับไปเช็คเอาต์ B3</b><p>ตั้งเป้าถึงที่พักประมาณ 13:00 น.</p></div></div>
 <div class="event"><div class="time">13:00</div><div><b>ออกเดินทางไปวัดเจดีย์ (ไอ้ไข่)</b><p>ใช้เวลาเดินทางประมาณ 1 ชั่วโมง 20 นาทีตามแพลน</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/vMyT7CmrLt9N4tS38?g_st=ic">แผนที่วัดเจดีย์ ↗</a></div></div>
 <div class="event"><div class="time">14:20</div><div><b>ถึงวัดเจดีย์ (ไอ้ไข่)</b><p>ไหว้พระและขอพร ณ อำเภอสิชล</p></div></div>
-<div class="event"><div class="time">15:00</div><div><b>ออกจากวัดเจดีย์ ไป Luca Cafe</b><p>คาเฟ่ริมทะเล Luca Beach Club Sichon</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/nk7QrbtcKkE9tjSc8?g_st=ic">แผนที่ Luca Cafe ↗</a></div></div>
+<div class="event"><div class="time">15:00</div><div><b>ออกจากวัดเจดีย์ ไป Luca Cafe</b><p>คาเฟ่ริมทะเล Luca Beach Club Sichon</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Luca+Beach+Club+Sichon%2C+83%2F5+Thung+Sai%2C+Sichon%2C+Nakhon+Si+Thammarat">แผนที่ Luca Cafe ↗</a></div></div>
 <div class="event"><div class="time">16:00</div><div><b>ถึง Luca Cafe</b><p>พักผ่อน ถ่ายรูป และชมบรรยากาศริมทะเล</p></div></div>
-<div class="event"><div class="time">หลัง 16:00</div><div><b>เช็คอิน Aiyara Camping & Resort</b><p>ที่พักโซนสิชล</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/QtGyv2Fykiooi1QC7?g_st=ic">แผนที่ Aiyara Camping ↗</a></div></div>
+<div class="event"><div class="time">หลัง 16:00</div><div><b>เช็คอิน Aiyara Camping & Resort</b><p>ที่พักโซนสิชล</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Aiyara+Camping+%26+Resort%2C+Thung+Sai%2C+Sichon%2C+Nakhon+Si+Thammarat">แผนที่ Aiyara Camping ↗</a></div></div>
 <div class="event"><div class="time">17:30</div><div><b>ออกไปทานอาหารเย็น</b><p>ร้านที่เสนอ: สิชลซีฟู้ด (อาจมีการเปลี่ยนแปลง)</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/eMLZ1gFRhh8sEXhx8?g_st=ic">แผนที่สิชลซีฟู้ด ↗</a></div></div>
 <div class="event"><div class="time">19:30</div><div><b>กลับที่พัก</b><p>พักผ่อน จิบเครื่องดื่ม หรือจัดหมูกระทะตามสะดวก</p></div></div>
 </div></article>
 
 <div class="section-head" id="day3"><small>DAY 03 · MONDAY</small><h2>11 มกราคม 2570 — วิวทะเล & เดินทางกลับ</h2><p class="muted">เก็บภาพบรรยากาศเขาพลายดำ ก่อนแยกย้าย</p></div>
-<article class="day"><div class="day-top"><div class="day-title"><span class="date">11 JAN 2027</span><h3>Coastal Morning</h3><p class="muted">เช็คเอาต์ · จุดชมวิว · แยกย้ายกลับบ้าน</p></div><img src="assets/khao-plai-dam.jpg" alt="วิวชายฝั่งและถนนเลียบทะเล"></div>
+<article class="day"><div class="day-top"><div class="day-title"><span class="date">11 JAN 2027</span><h3>Coastal Morning</h3><p class="muted">เช็คเอาต์ · จุดชมวิว · แยกย้ายกลับบ้าน</p></div><img src="https://patricklepetit.jalbum.net/NAKHON%20SI%20THAMMARAT/PHOTOS/SICHON/Khao%20Phlai%20Dam%20View%20Point/thumbs/U0827149.jpg" alt="วิวชายฝั่งและถนนเลียบทะเล"></div>
 <div class="timeline">
-<div class="event"><div class="time">09:30</div><div><b>เช็คเอาต์ที่พัก</b><p>ออกเดินทางไปจุดชมวิวเขาพลายดำ และหาดในเพลา</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/kMZridLEf6Ws5eyi6?g_st=ic">แผนที่เขาพลายดำ / หาดในเพลา ↗</a></div></div>
+<div class="event"><div class="time">09:30</div><div><b>เช็คเอาต์ที่พัก</b><p>ออกเดินทางไปจุดชมวิวเขาพลายดำ และหาดในเพลา</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Khao+Phlai+Dam+Viewpoint%2C+Sichon%2C+Nakhon+Si+Thammarat">แผนที่เขาพลายดำ / หาดในเพลา ↗</a></div></div>
 <div class="event"><div class="time">10:30</div><div><b>แยกย้ายเดินทาง</b><p>กลุ่มที่เดินทางต่อ: ปัง + แจ็ค + เอิง · รถ 2 คัน</p><p>อีกกลุ่ม: บอล + บิ๊ก + บีม + กี้ + ฟลุ๊ค · รถ 2 คัน</p></div></div>
 <div class="event"><div class="time">หลัง 10:30</div><div><b>บอล + บิ๊ก + บีม + กี้ + ฟลุ๊ค</b><p>เดินทางกลับเข้าตัวเมืองนครศรีธรรมราช</p><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/iXWbsqtzXYujMMvH8?g_st=ic">แผนที่ปลายทางในเมือง ↗</a></div></div>
 <div class="event"><div class="time">13:30</div><div><b>เดินทางไปสนามบินนครศรีธรรมราช</b><a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/LexPEgvzfuzGupET6?g_st=ic">แผนที่สนามบิน ↗</a></div></div>
 <div class="event"><div class="time">15:00</div><div><b>✈️ เดินทางกลับสุวรรณภูมิ</b><p>เที่ยวบินกลับตามกำหนดการ</p></div></div>
 </div></article>
 
-<div class="section-head" id="places"><small>PLACES TO VISIT</small><h2>ไฮไลต์ระหว่างทริป</h2><p class="muted">ภาพประกอบบรรยากาศของสถานที่และกิจกรรมในทริป</p></div>
+<div class="section-head" id="places"><small>PLACES TO VISIT</small><h2>ไฮไลต์ระหว่างทริป</h2><p class="muted">ภาพสถานที่จริงจากแหล่งเผยแพร่ภายนอกและภาพที่พักจากรายการออนไลน์</p></div>
 <div class="cards">
-<div class="place"><img src="assets/phra-mahathat.jpg" alt="เจดีย์สีขาว"><div><h3>วัดพระมหาธาตุฯ</h3><p>สักการะพระบรมธาตุคู่เมืองนคร</p></div></div>
-<div class="place"><img src="assets/temple.jpg" alt="วัดไทย"><div><h3>วัดเจดีย์ (ไอ้ไข่)</h3><p>แวะไหว้พระก่อนเข้าสิชล</p></div></div>
-<div class="place"><img src="assets/luca-seaside.jpg" alt="คาเฟ่ริมทะเล"><div><h3>Luca Cafe</h3><p>พักจิบกาแฟและชมวิวทะเล</p></div></div>
-<div class="place"><img src="assets/aiyara-camping.jpg" alt="เต็นท์แคมป์"><div><h3>Aiyara Camping</h3><p>พักผ่อนในบรรยากาศแคมป์ปิ้ง</p></div></div>
+<div class="place"><img src="https://cms.dmpcdn.com/travel/2025/02/07/5feace80-e521-11ef-b108-37ab1fcb8ce4_webp_original.webp" alt="เจดีย์สีขาว"><div><h3>วัดพระมหาธาตุฯ</h3><p>สักการะพระบรมธาตุคู่เมืองนคร</p></div></div>
+<div class="place"><img src="https://cms.dmpcdn.com/travel/2025/02/07/5feace80-e521-11ef-b108-37ab1fcb8ce4_webp_original.webp" alt="วัดไทย"><div><h3>วัดเจดีย์ (ไอ้ไข่)</h3><p>แวะไหว้พระก่อนเข้าสิชล</p></div></div>
+<div class="place"><img src="https://app.fourgle.com/_next/image?q=75&url=https%3A%2F%2Fstatic-1.fourgle.com%2Fcontents%2F661d79eae923a30d9948e4d4%2F661d89469545fb806bf70f2a%2F1_3%2Flarge.png%3Fhash%3DLII50q-%253AxX%2525L~px%255DIqax4%253BE2ItRQ&w=3840" alt="คาเฟ่ริมทะเล"><div><h3>Luca Cafe</h3><p>พักจิบกาแฟและชมวิวทะเล</p></div></div>
+<div class="place"><img src="https://pix10.agoda.net/hotelImages/61874346/0/3723e8bbe1c5bdbd77a71849b477b6c0.jpg?ce=0&s=1024x768" alt="เต็นท์แคมป์"><div><h3>Aiyara Camping</h3><p>พักผ่อนในบรรยากาศแคมป์ปิ้ง</p></div></div>
 <div class="place"><img src="assets/seafood.jpg" alt="อาหารทะเล"><div><h3>มื้ออาหารทะเล</h3><p>เติมพลังกับอาหารท้องถิ่น</p></div></div>
-<div class="place"><img src="assets/khao-plai-dam.jpg" alt="วิวทะเลจากเขา"><div><h3>เขาพลายดำ</h3><p>ชมวิวชายฝั่งและหาดในเพลา</p></div></div>
+<div class="place"><img src="https://patricklepetit.jalbum.net/NAKHON%20SI%20THAMMARAT/PHOTOS/SICHON/Khao%20Phlai%20Dam%20View%20Point/thumbs/U0827149.jpg" alt="วิวทะเลจากเขา"><div><h3>เขาพลายดำ</h3><p>ชมวิวชายฝั่งและหาดในเพลา</p></div></div>
 </div>
-<div class="notice"><b>หมายเหตุ:</b> ภาพสถานที่ในเว็บไซต์เป็นภาพประกอบที่สร้างขึ้นเพื่อสื่อบรรยากาศ ไม่ใช่ภาพถ่ายยืนยันสถานที่จริง โปรดตรวจสอบเที่ยวบิน เวลาเปิด-ปิด และรายละเอียดที่พัก/ร้านอาหารอีกครั้งก่อนเดินทาง กำหนดการบางช่วงเป็นเวลาโดยประมาณตามข้อมูลที่ได้รับ</div>
+<div class="notice"><b>หมายเหตุ:</b> ภาพพระมหาธาตุ, Luca Beach Club และเขาพลายดำใช้ภาพจากแหล่งเผยแพร่ภายนอก ส่วนภาพ Aiyara ใช้ภาพจากรายการที่พักออนไลน์ ลิงก์ Google Maps ของ Luca, Aiyara และเขาพลายดำเป็นลิงก์ค้นหาชื่อ/ที่อยู่ เพราะ short link เดิมไม่สามารถ resolve เพื่อตรวจ pin ได้ จึงยังยืนยันไม่ได้ว่า short link เดิมชี้ไปยัง pin เดียวกัน กำหนดการบางช่วงเป็นเวลาโดยประมาณตามข้อมูลที่ได้รับ</div>
 
 <section class="closing" id="thanks">
 <img src="assets/thank-you-photo.png" alt="ภาพผู้จัดทำแพลน">
 <div class="closing-text"><div class="eyebrow">A TRIP MADE WITH CARE</div><h2>ขอบคุณสำหรับแพลนทริปดี ๆ</h2><p>ขอบคุณคนคิดแพลนและประสานงานให้ทุกคนได้มาเจอกัน</p><p class="signature">จ.ส.ต.ธงชัย เดชวิลัยพร</p><p>แล้วเจอกันที่นครศรีธรรมราช 🤍</p></div>
 </section>
 </main>
-<footer>นครศรีฯ Trip · 9–11 มกราคม 2570 · Made for friends, memories & good times</footer>
+<footer>ภาพอ้างอิง: TAT Media Assets / Agoda / Lemon8 · ข้อมูลอากาศ: ClimaNote 1991–2020<br>นครศรีฯ Trip · 9–11 มกราคม 2570 · Made for friends, memories & good times</footer>
 </body></html>
